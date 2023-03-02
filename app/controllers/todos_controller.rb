@@ -3,6 +3,7 @@ class TodosController < ApplicationController
 
   # GET /todos
   def index
+    # debugger
     @todos = Todo.all
 
     render json: @todos
@@ -46,6 +47,6 @@ class TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:task, :type)
+      params.require(:todo).permit(:task)
     end
 end
