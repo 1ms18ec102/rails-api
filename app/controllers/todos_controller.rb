@@ -5,7 +5,6 @@ class TodosController < ApplicationController
   def index
     # debugger
     @todos = Todo.all
-
     render json: @todos
   end
 
